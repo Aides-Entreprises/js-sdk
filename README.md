@@ -7,8 +7,7 @@ Cette librairie Javascript permet d'interagir avec les données du service [aide
 
 ```html
 <script type="text/javascript" src="aides-entreprises-sdk.js"></script>
-```
-```js
+
 <script>
 var sdk = new window.aidesEntreprisesSDK();
 sdk.projets().then(function(data) {
