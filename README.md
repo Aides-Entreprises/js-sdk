@@ -25,7 +25,21 @@ sdk.query()
 
 # Utilisation côté serveur
 
-plus d'informations à venir
+```bash
+npm install --save aides-entreprises/js-sdk
+```
+
+```js
+sdk = new Sdk();
+let projets = await sdk.projets();
+console.log(projets)
+let aides = await sdk.query()
+    .profils(6)
+    .projets([57, 131])
+    .execute();    
+console.log(aides)
+```
+
 
 # Développement
 
