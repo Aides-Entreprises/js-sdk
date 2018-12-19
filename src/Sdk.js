@@ -191,3 +191,5 @@ window.aidesEntreprisesSDK = class Sdk extends EventEmitter {
 
 
 }
+
+export default window.aidesEntreprisesSDK;
