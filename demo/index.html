@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <title>Aides Entreprises JS SDK</title>
+    <script type="text/javascript" src="../dist/aides-entreprises-sdk.js"></script>
+    <script>
+        var sdk = new window.aidesEntreprisesSDK();
+        sdk.projets().then(function(data) {
+            for (var i in data) {
+                document.getElementById('projets').innerHTML += data[i]['nom'] + '<br />';
+            }
+        });
+
+        sdk.profils().then(function(data) {
+            for (var i in data) {
+                document.getElementById('profils').innerHTML += data[i]['nom'] + '<br />';
+            }
+        });
+
+        sdk.query()
+            .profils(6)
+            .projets([57, 131])
+            .execute()
+            .then(function(data) {
+                console.log(data)
+                for (var i in data.data) {
+                    document.getElementById('aides').innerHTML += data.data[i]['aid_nom'] + '<br />';
+                }
+            });
+    </script>
+</head>
+
+<body>
+    <h1>Projets</h1>
+    <div id="projets">
+
+    </div>
+    <h1>Profils</h1>
+    <div id="profils">
+
+    </div>
+    <h1>Recher d'Aides en fonction de critères</h1>
+    <div id="aides">
+
+    </div>
+</body>
+
+</html>
