@@ -1,4 +1,4 @@
-# Welcome to StackEdit!
+# Librairie
 
 Cette librairie Javascript permet d'interagir avec les données du service [aides-entreprises.fr](https://www.aides-entreprises.fr)
 
