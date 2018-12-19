@@ -11,14 +11,14 @@ Cette librairie Javascript permet d'interagir avec les données du service [aide
 <script>
 var sdk = new window.aidesEntreprisesSDK();
 sdk.projets().then(function(data) {
-    console.log(data)
+    console.log(data);
 });
 sdk.query()
     .profils(6)
     .projets([57, 131])
     .execute()
     .then(function(data) {
-        console.log(data)                
+        console.log(data);             
     });
 </script>
 ```
@@ -32,12 +32,13 @@ npm install --save aides-entreprises/js-sdk
 ```js
 sdk = new Sdk();
 let projets = await sdk.projets();
-console.log(projets)
+console.log(projets);
+
 let aides = await sdk.query()
     .profils(6)
     .projets([57, 131])
     .execute();    
-console.log(aides)
+console.log(aides);
 ```
 
 
